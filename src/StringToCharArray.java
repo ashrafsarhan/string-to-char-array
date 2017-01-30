@@ -1,6 +1,10 @@
-package com.dropwiz.ws.api;
+package com.baeldung.stringtochar;
 
-import java.util.Arrays;
+
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+
 
 /**
  * The Class StringToCharArray.
@@ -9,21 +13,10 @@ import java.util.Arrays;
  */
 public class StringToCharArray {
 
-	public static void main(String[] args) {
+	@Test
+	public void testStringToCharArray() {
 		String str = "HELLO WORLD";
-		char[] charArray = getCharArray(str);
-		System.out.println("getCharArray using String.toCharArray() : " + Arrays.toString(charArray));
-	}
-
-	/**
-	 * Gets the char array.
-	 *
-	 * @param str the str
-	 * @return the char array
-	 */
-	public static char[] getCharArray(String str) {
 		char[] charArray = str.toCharArray();
-		return charArray;
+		assertTrue(str.length() == charArray.length);
 	}
-
 }
